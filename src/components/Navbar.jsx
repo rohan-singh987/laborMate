@@ -1,19 +1,31 @@
-import React from 'react'
+import  AddIcon  from '@mui/icons-material/Add';
+import { Button } from '@mui/material';
+import { Search } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   return (
     <div className='bg-gradient-to-r from-[#009FBD] via-blue-100 to-gray-500  flex justify-between justify-items-center content-center p-2'>
+
+      <Link to={'/'}>
         <span className='text-red-100 text-4xl cursor-pointer'>Labour<span className='text-gray-900'>Mate</span></span>
+      </Link>
 
         <div className='flex justify-between justify-items-center items-center cursor-pointer text-xl'>
+            <div className='bg-white flex items-center rounded-xl px-4 py-0.5'>
+                <Search className='' /> <input className='m:hide' type="text"  />
+            </div>
             <div className='mx-8'>Home</div>
             <div className='mx-8'>about</div>
             <div className='mx-8'>Contact Us</div>
         </div>
 
-        <div className='flex items-center mr-6 bg-gray-200 rounded-2xl'>
-            <button className='px-4'>Login/Signup</button>
+      <Link to={'/newemployee'}>
+        <div className='flex items-center px-3 mr-2 bg-gray-200 rounded-2xl'>
+            <AddIcon color='inherit' /> <Button className=''>Add New</Button>
         </div>
+      </Link>
     </div>
   )
 }
