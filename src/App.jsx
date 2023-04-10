@@ -6,7 +6,7 @@ import NewEmployee from './components/NewEmployee'
 
 const App = () => {
   return (
-    <div >
+    <div className='relative' >
 
       <Navbar />
       <Routes>
