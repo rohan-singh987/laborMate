@@ -2,11 +2,16 @@ import  AddIcon  from '@mui/icons-material/Add';
 import { Button } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { Appstate } from '../App';
+import { useContext } from 'react';
 
 
 const Navbar = () => {
+
+  const useAppstate =  useContext(Appstate)
+
   return (
-    <div className='bg-gradient-to-r from-[#009FBD] via-blue-100 to-gray-500  flex justify-between justify-items-center content-center p-2'>
+    <div className=' sticky top-0 z-10 bg-gradient-to-r from-[#009FBD] via-blue-100 to-gray-500  flex justify-between justify-items-center content-center p-2'>
 
       <Link to={'/'}>
         <span className='text-red-100 text-4xl cursor-pointer'>Labour<span className='text-gray-900'>Mate</span></span>
@@ -21,11 +26,22 @@ const Navbar = () => {
             <div className='mx-8'>Contact Us</div>
         </div>
 
-      <Link to={'/newemployee'}>
+
+        
+      {
+        useAppstate.login ? 
+        <Link to={'/newemployee'}>
         <div className='flex items-center px-3 mr-2 bg-gray-200 rounded-2xl'>
             <AddIcon color='inherit' /> <Button className=''>Add New</Button>
         </div>
       </Link>
+      :
+        <Link to={'/login'}>
+        <div className='flex items-center px-3 mr-2 bg-gray-200 rounded-2xl'>
+            <Button className=''>Login</Button>
+        </div>
+      </Link>
+      }
     </div>
   )
 }
