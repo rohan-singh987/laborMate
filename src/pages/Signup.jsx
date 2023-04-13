@@ -2,7 +2,9 @@ import {useState} from 'react'
 import { TailSpin } from 'react-loader-spinner';
 import { getAuth, RecaptchaVerifier,signInWithPhoneNumber } from "firebase/auth";
 import { Link } from 'react-router-dom';
-import app from '../firebase/firebase';
+import app, { usersRef } from '../firebase/firebase';
+import { addDoc } from 'firebase/firestore';
+
 
 const auth = getAuth(app)
 
@@ -41,6 +43,30 @@ const requestOtp = () => {
     })
 }
 
+
+const verifyOTP = () => {
+  try {
+    setLoading(true);
+    window.confirmationResult.confirm(OTP).then((result) => {
+      uploadData()
+      swal({
+        text: "Sucessfully Registered",
+        icon: "success",
+        buttons: false,
+        timer: 3000,
+      });
+      navigate('/login')
+      setLoading(false); 
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const uploadData = async () =>{
+  await addDoc(usersRef, form)
+}
+
   return (
     <div className="w-full flex flex-col mt-8 items-center">
       <h1 className="text-xl font-bold">Sign up</h1>
@@ -64,7 +90,7 @@ const requestOtp = () => {
         </div>
         <div class="p-2 w-full">
         <button
-          // onClick={verifyOTP}
+          onClick={verifyOTP}
           class="flex mx-auto text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg"
         >
           {loading ? <TailSpin height={25} color="white" /> : "Confirm OTP"}
