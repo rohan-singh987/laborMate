@@ -1,7 +1,8 @@
 # laborMate
 
 ### Tech-Stack
-JavaScript, ReactJS-Redux, FireBase, TailwindCSS
+Frontend: JavaScript, ReactJS-Redux, TailwindCSS                
+DataBase: FireBase-Firestore
 
 ### Purpose
 The purpose of this project is to help labors to find a job and similarly to help consumers to find labor that can meet their requirements, comparing their skills, 
