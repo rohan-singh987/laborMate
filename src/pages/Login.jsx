@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Appstate } from "../App";
 import swal from "sweetalert";
 import { usersRef } from '../firebase/firebase';
+// import bg from '../assets/polotno.png'
 
 
 const Login = () => {
@@ -60,11 +61,11 @@ const Login = () => {
 
 
   return (
-    <div className="w-full flex flex-col mt-8 items-center">
-    <h1 className="text-xl font-bold">Login</h1>
-    <div class="p-2 w-full md:w-1/3">
+    <div className="w-full text-black h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#B7B7B7] via-[#B9E9FC] to-[#F6F1F1] ">
+    <h1 className="text-2xl font-bold">Login</h1>
+    <div class="m-2 w-full md:w-1/3">
       <div class="relative">
-        <label for="message" class="leading-7 text-sm text-gray-300">
+        <label for="message" class="leading-7 text-sm text-bold">
           Mobile No.
         </label>
         <input
@@ -77,7 +78,7 @@ const Login = () => {
     </div>
     <div class="p-2 w-full md:w-1/3">
       <div class="relative">
-        <label for="message" class="leading-7 text-sm text-gray-300">
+        <label for="message" class="leading-7 text-sm text">
           Password
         </label>
         <input

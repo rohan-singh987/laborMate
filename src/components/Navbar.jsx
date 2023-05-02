@@ -11,10 +11,10 @@ const Navbar = () => {
   const useAppstate =  useContext(Appstate)
 
   return (
-    <div className=' sticky top-0 z-10 bg-gradient-to-r from-[#009FBD] via-blue-100 to-gray-500  flex justify-between justify-items-center content-center p-2'>
+    <div className=' sticky top-0 z-10 bg-gradient-to-r from-[#DBA39A] via-blue-100 to-gray-500  flex justify-between justify-items-center content-center p-2'>
 
       <Link to={'/'}>
-        <span className='text-red-100 text-4xl cursor-pointer'>Labour<span className='text-gray-900'>Mate</span></span>
+        <span className='text-[#704F4F] text-4xl cursor-pointer'>Labour<span className='text-gray-900'>Mate</span></span>
       </Link>
 
         <div className='flex justify-between justify-items-center items-center cursor-pointer text-xl'>
