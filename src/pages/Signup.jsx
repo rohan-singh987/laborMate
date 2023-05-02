@@ -68,7 +68,7 @@ const uploadData = async () =>{
 }
 
   return (
-    <div className="w-full flex flex-col mt-8 items-center">
+    <div className="w-full flex flex-col h-screen justify-center items-center bg-gradient-to-r from-[#B7B7B7] via-[#B9E9FC] to-[#F6F1F1] ">
       <h1 className="text-xl font-bold">Sign up</h1>
 
 {
@@ -102,7 +102,7 @@ const uploadData = async () =>{
         <>
       <div class="p-2 w-full md:w-1/3">
         <div class="relative">
-          <label for="message" class="leading-7 text-sm text-gray-300">
+          <label for="message" class="leading-7 text-md text-">
             Name
           </label>
           <input
@@ -114,7 +114,7 @@ const uploadData = async () =>{
       </div>
       <div class="p-2 w-full md:w-1/3">
         <div class="relative">
-          <label for="message" class="leading-7 text-sm text-gray-300">
+          <label for="message" class="leading-7 text-md text-gray">
             Mobile No.
           </label>
           <input
@@ -127,7 +127,7 @@ const uploadData = async () =>{
       </div>
       <div class="p-2 w-full md:w-1/3">
         <div class="relative">
-          <label for="message" class="leading-7 text-sm text-gray-300">
+          <label for="message" class="leading-7 text-md text">
             Password
           </label>
           <input
